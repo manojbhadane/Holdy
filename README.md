@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/manojbhadane/Social-Icons/master/holdy.png" width="1000" height="400">
+<img src="https://raw.githubusercontent.com/manojbhadane/Social-Icons/master/holdy2.png" >
 
 # Holdy
 Container for any fragment
