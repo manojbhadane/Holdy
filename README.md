@@ -85,22 +85,22 @@ There are several customization options available which you can use to completel
 
 You can also programatically change the properties of the view, thereby having more control over it.
 
-##### 1. Title for fragment
+#### 1. Title for fragment
 setTitle("Home")
 
-##### 2. Toolbar visibility for fragment
+#### 2. Toolbar visibility for fragment
 setShowToolbar(true)
 
-##### 3. Send bundle to fragment
+#### 3. Send bundle to fragment
 setBundle(new Bundle())
 
-##### 4. Toolbar Back button visibility for fragment
+#### 4. Toolbar Back button visibility for fragment
 setToolbarBackBtn(true)
 
-##### 5. Custom theme for fragment
+#### 5. Custom theme for fragment
 setTheme(R.style.HomeTheme)
 
-##### 6. Fragment that needs to be load
+#### 6. Fragment that needs to be load
 setFragment(LoginFragment.class.getCanonicalName())
 
 
