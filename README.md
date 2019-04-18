@@ -40,7 +40,7 @@ dependencies
 
 # Usage
 
-**Style.xml**
+## Style.xml
 This Mandatory style, configure once in application class. you can create your own style for each holder but parent for each 
 style should be 'Theme.AppCompat.Light.NoActionBar'
 ```xml
@@ -51,20 +51,20 @@ style should be 'Theme.AppCompat.Light.NoActionBar'
 </style>
 ```
 
-**In Application class**
+## In Application class
 Set style for all holders
 ```
 Holdy.init(R.style.HoldyTheme);
 ```
 
-**Minimum configuration**
+## Minimum configuration
 ```Java
 new Holdy.Builder(this)
          .setFragment(LoginFragment.class.getCanonicalName())
          .build();
 ``` 
 
-**Minimum configuration**
+## Maximum configuration
 ```
 new Holdy.Builder(this)
           .setTitle("Home")
