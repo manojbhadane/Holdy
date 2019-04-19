@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-public class Holdy {
+final public class Holdy {
 
     protected static final String KEY = "key_container";
     protected static final String KEY_TITLE = "key_title";
@@ -16,14 +16,19 @@ public class Holdy {
 
     private static int sTheme;
 
-    public Holdy() {
+    private Holdy() {
+    }
+
+    public static HoldyBuilder Builder(Context context)
+    {
+        return new HoldyBuilder(context);
     }
 
     public static void init(int theme) {
         sTheme = theme;
     }
 
-    public static class Builder {
+    public static class HoldyBuilder {
 
         private String mTitle;
         private Bundle mBundle;
@@ -34,15 +39,25 @@ public class Holdy {
         private boolean mShowToolbar = true;
         private boolean mShowToolbarBackBtn = true;
 
-        public Builder(Context context) {
+        public HoldyBuilder(Context context) {
             mContext = context;
+        }
+
+        public void build() {
+            if (mFragment.length() > 0) {
+                Intent intent = new Intent(mContext, HolderActivity.class);
+                intent.putExtra(KEY, getBundle());
+                mContext.startActivity(intent);
+            } else {
+                Toast.makeText(mContext, "Invalid fragment", Toast.LENGTH_SHORT).show();
+            }
         }
 
         public String getTitle() {
             return mTitle;
         }
 
-        public Builder setTitle(String title) {
+        public HoldyBuilder setTitle(String title) {
             this.mTitle = title;
             return this;
         }
@@ -65,7 +80,7 @@ public class Holdy {
             return mBundle;
         }
 
-        public Builder setBundle(Bundle bundle) {
+        public HoldyBuilder setBundle(Bundle bundle) {
             this.mBundle = bundle;
             return this;
         }
@@ -74,12 +89,12 @@ public class Holdy {
             return mShowToolbar;
         }
 
-        public Builder setShowToolbar(boolean showToolbar) {
+        public HoldyBuilder setShowToolbar(boolean showToolbar) {
             this.mShowToolbar = showToolbar;
             return this;
         }
 
-        public Builder setFragment(String fragment) {
+        public HoldyBuilder setFragment(String fragment) {
             this.mFragment = fragment;
             return this;
         }
@@ -88,7 +103,7 @@ public class Holdy {
             return mShowToolbarBackBtn;
         }
 
-        public Builder setToolbarBackBtn(boolean showToolbarBackBtn) {
+        public HoldyBuilder setToolbarBackBtn(boolean showToolbarBackBtn) {
             this.mShowToolbarBackBtn = showToolbarBackBtn;
             return this;
         }
@@ -97,19 +112,10 @@ public class Holdy {
             return mTheme;
         }
 
-        public Builder setTheme(int theme) {
+        public HoldyBuilder setTheme(int theme) {
             this.mTheme = theme;
             return this;
         }
 
-        public void build() {
-            if (mFragment.length() > 0) {
-                Intent intent = new Intent(mContext, HolderActivity.class);
-                intent.putExtra(KEY, getBundle());
-                mContext.startActivity(intent);
-            } else {
-                Toast.makeText(mContext, "Invalid fragment", Toast.LENGTH_SHORT).show();
-            }
-        }
     }
 }

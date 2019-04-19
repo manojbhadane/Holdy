@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 /**
                  * Login fragment
                  */
-                new Holdy.Builder(MainActivity.this)
+                Holdy.Builder(MainActivity.this)
                         .setTitle("Login")
                         .setToolbarBackBtn(false)
                         .setFragment(LoginFragment.class.getCanonicalName())
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 /**
                  * Home fragment
                  */
-                new Holdy.Builder(MainActivity.this)
+                 Holdy.Builder(MainActivity.this)
                         .setTitle("Home")
                         .setShowToolbar(true)
                         .setBundle(new Bundle())
@@ -66,13 +66,12 @@ public class MainActivity extends AppCompatActivity {
                 /**
                  * Details fragment
                  */
-                new Holdy.Builder(MainActivity.this)
+                 Holdy.Builder(MainActivity.this)
                         .setTitle("Details")
                         .setToolbarBackBtn(true)
                         .setFragment(DetailsFragment.class.getCanonicalName())
                         .build();
             }
         });
-
     }
 }
