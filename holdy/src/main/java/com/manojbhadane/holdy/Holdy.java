@@ -19,8 +19,7 @@ final public class Holdy {
     private Holdy() {
     }
 
-    public static HoldyBuilder Builder(Context context)
-    {
+    public static HoldyBuilder Builder(Context context) {
         return new HoldyBuilder(context);
     }
 
@@ -68,9 +67,9 @@ final public class Holdy {
                 mBundle = new Bundle();
 
             mBundle.putString(KEY_TITLE, getTitle());
+            mBundle.putString(KEY_FRAGMENT, mFragment);
             mBundle.putBoolean(KEY_TOOLBAR_VISIBILITY, isShowToolbar());
             mBundle.putBoolean(KEY_TOOLBAR_BACKBTN_VISIBILITY, isToolbarBackBtnShown());
-            mBundle.putString(KEY_FRAGMENT, mFragment);
             if (sTheme != 0)
                 mBundle.putInt(KEY_THEME, sTheme);
 
