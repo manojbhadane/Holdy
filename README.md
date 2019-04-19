@@ -40,10 +40,6 @@ dependencies
 }
 ```
 
-### Spread Some :heart:
-[![GitHub followers](https://img.shields.io/github/followers/manojbhadane.svg?style=social&label=Follow)](https://github.com/manojbhadane)  [![Twitter Follow](https://img.shields.io/twitter/follow/manojbhadane.svg?style=social)](https://twitter.com/Manoj_bhadane) 
-
-
 # Usage
 
 ## Style.xml
@@ -114,6 +110,9 @@ setFragment(LoginFragment.class.getCanonicalName())
 1. **Fincal :** You can download the app from Google Play:
 
 <a target="_blank" href="https://play.google.com/store/apps/details?id=com.financecalculator"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" height="60"></a>
+
+# Spread Some :heart:
+[![GitHub followers](https://img.shields.io/github/followers/manojbhadane.svg?style=social&label=Follow)](https://github.com/manojbhadane)  [![Twitter Follow](https://img.shields.io/twitter/follow/manojbhadane.svg?style=social)](https://twitter.com/Manoj_bhadane) 
 
 
 # Bugs or Requests
