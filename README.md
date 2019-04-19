@@ -108,6 +108,8 @@ setFragment(LoginFragment.class.getCanonicalName())
 
 If you encounter any problems feel free to open an [issue](https://github.com/manojbhadane/Holdy/issues/new?assignees=&labels=&template=bug_report.md). If you feel the library is missing a feature, please raise a [ticket](https://github.com/manojbhadane/Holdy/issues/new?assignees=&labels=&template=feature_request.md) on GitHub and I'll look into it. Pull request are also welcome. 
 
+# If this library helps you in anyway, show your love :heart: by putting a :star: on this project :v:
+
 # About The Author
 
 ### Manoj Bhadane
@@ -120,7 +122,6 @@ Android & Backend Developer.
 <a href="https://twitter.com/Manoj_bhadane"><img src="https://github.com/manojbhadane/Social-Icons/blob/master/twitter-icon.png?raw=true" width="60"></a>
 <a href="https://in.linkedin.com/in/manojbhadane"><img src="https://github.com/manojbhadane/Social-Icons/blob/master/linkedin-icon.png?raw=true" width="60"></a>
 
-# If this library helps you in anyway, show your love :heart: by putting a :star: on this project :v:
 
 # License
 
