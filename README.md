@@ -23,8 +23,7 @@ This library is available in **jitPack** which is the default Maven repository u
 ## Gradle 
 **Step 1.** Add it in your root **build.gradle** at the end of repositories
 ```Gradle
-allprojects 
-{
+allprojects {
 	repositories {
 		...
 		maven { url 'https://jitpack.io' }
