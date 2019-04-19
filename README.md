@@ -59,14 +59,14 @@ Holdy.init(R.style.HoldyTheme);
 
 ## Minimum configuration
 ```Java
-new Holdy.Builder(this)
+Holdy.Builder(this)
          .setFragment(LoginFragment.class.getCanonicalName())
          .build();
 ``` 
 
 ## Maximum configuration
 ```
-new Holdy.Builder(this)
+Holdy.Builder(this)
           .setTitle("Home")
           .setShowToolbar(true)
           .setBundle(new Bundle())
