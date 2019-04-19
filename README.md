@@ -34,9 +34,8 @@ allprojects
 
 **Step 2.** Add the dependency in your apps module **build.gradle**
 ```Gradle
-dependencies 
-{
-		 implementation 'com.github.manojbhadane:Holdy:v1.1'
+dependencies {
+	 implementation 'com.github.manojbhadane:Holdy:v1.1'
 }
 ```
 
