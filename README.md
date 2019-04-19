@@ -1,7 +1,14 @@
 <img src="https://raw.githubusercontent.com/manojbhadane/Social-Icons/master/holdy3.png" >
 
-#
-Lightweight, Easy to use container for any fragment
+<h4 align="center">Android Library</h4>
+
+<p align="center">
+  <a target="_blank" href="https://android-arsenal.com/api?level=16"><img src="https://img.shields.io/badge/API-9%2B-orange.svg"></a>
+  <a target="_blank" href="https://jitpack.io/#manojbhadane/Holdy"><img src="https://jitpack.io/v/manojbhadane/Holdy.svg"></a>
+  <a target="_blank" href="https://paypal.me/manojbhadane" title="Donate using PayPal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" /></a>
+</p>
+
+<p align="center">Android Library that can easily load any fragment in a provided container. library encourage us to use maximum fragments which reducing application size. With holdy you can easily deal with fragments.</p>
 
 # Features
 **1. Reduce application size with holdy**<br/>
