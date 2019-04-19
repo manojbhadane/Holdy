@@ -23,8 +23,8 @@ Lightweight, Easy to use container for any fragment
 This library is available in **jitPack** which is the default Maven repository used in Android Studio.
 
 ## Gradle 
-**Step 1.** Add it in your root build.gradle at the end of repositories
-```
+**Step 1.** Add it in your root **build.gradle** at the end of repositories
+```Gradle
 allprojects 
 {
 	repositories {
@@ -34,8 +34,8 @@ allprojects
 }
 ```
 
-**Step 2.** Add the dependency in your apps module build.gradle
-```
+**Step 2.** Add the dependency in your apps module **build.gradle**
+```Gradle
 dependencies 
 {
 		 implementation 'com.github.manojbhadane:Holdy:v1.1'
@@ -111,6 +111,12 @@ setTheme(R.style.HomeTheme)
 6. Fragment that needs to be load
 setFragment(LoginFragment.class.getCanonicalName())
 ```
+
+## App Which is using Holdy
+1. **Fincal :** You can download the app from Google Play:
+
+<a target="_blank" href="https://play.google.com/store/apps/details?id=com.financecalculator"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" height="60"></a>
+
 
 # Bugs or Requests
 
