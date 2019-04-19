@@ -1,26 +1,29 @@
 <img src="https://raw.githubusercontent.com/manojbhadane/Social-Icons/master/holdy3.png" >
 
-#
-Lightweight, Easy to use container for any fragment
+<h4 align="center">Android Library</h4>
 
-### Specs
-<!---[![](https://jitpack.io/v/manojbhadane/QButton.svg)](https://jitpack.io/#manojbhadane/QButton)-->
+<p align="center">
+  <a target="_blank" href="https://android-arsenal.com/api?level=16"><img src="https://img.shields.io/badge/API-9%2B-orange.svg"></a>
+  <a target="_blank" href="https://jitpack.io/#manojbhadane/Holdy"><img src="https://jitpack.io/v/manojbhadane/Holdy.svg"></a>
+  <a target="_blank" href="https://paypal.me/manojbhadane" title="Donate using PayPal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" /></a>
+</p>
 
-<!---[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-QButton-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/7506)-->
-[![API](https://img.shields.io/badge/API-16%2B-orange.svg?style=flat)](https://android-arsenal.com/api?level=16) 
-[![](https://jitpack.io/v/manojbhadane/Holdy.svg)](https://jitpack.io/#manojbhadane/Holdy)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://paypal.me/manojbhadane)
-<!---[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) -->
+<p align="center">Android Library that can easily load any fragment in a provided container. library encourage us to use maximum fragments which reducing application size. With holdy you can easily deal with fragments.</p>
+
+# Features
+**1. Reduce application size with holdy**<br/>
+**2. Deal with fragments easily with holdy**<br/>
+**3. Highly customisable**<br/>
+
 
 # Download
 
 This library is available in **jitPack** which is the default Maven repository used in Android Studio.
 
 ## Gradle 
-**Step 1.** Add it in your root build.gradle at the end of repositories
-```
-allprojects 
-{
+**Step 1.** Add it in your root **build.gradle** at the end of repositories
+```Gradle
+allprojects {
 	repositories {
 		...
 		maven { url 'https://jitpack.io' }
@@ -28,17 +31,12 @@ allprojects
 }
 ```
 
-**Step 2.** Add the dependency in your apps module build.gradle
-```
-dependencies 
-{
-		 implementation 'com.github.manojbhadane:Holdy:v1.0'
+**Step 2.** Add the dependency in your apps module **build.gradle**
+```Gradle
+dependencies {
+	 implementation 'com.github.manojbhadane:Holdy:v1.1'
 }
 ```
-
-### Spread Some :heart:
-[![GitHub followers](https://img.shields.io/github/followers/manojbhadane.svg?style=social&label=Follow)](https://github.com/manojbhadane)  [![Twitter Follow](https://img.shields.io/twitter/follow/manojbhadane.svg?style=social)](https://twitter.com/Manoj_bhadane) 
-
 
 # Usage
 
@@ -61,14 +59,14 @@ Holdy.init(R.style.HoldyTheme);
 
 ## Minimum configuration
 ```Java
-new Holdy.Builder(this)
+Holdy.Builder(this)
          .setFragment(LoginFragment.class.getCanonicalName())
          .build();
 ``` 
 
 ## Maximum configuration
 ```
-new Holdy.Builder(this)
+Holdy.Builder(this)
           .setTitle("Home")
           .setShowToolbar(true)
           .setBundle(new Bundle())
@@ -105,6 +103,15 @@ setTheme(R.style.HomeTheme)
 6. Fragment that needs to be load
 setFragment(LoginFragment.class.getCanonicalName())
 ```
+
+# Apps using Holdy
+1. **Fincal :** You can download the app from Google Play:
+
+<a target="_blank" href="https://play.google.com/store/apps/details?id=com.financecalculator"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" height="60"></a>
+
+# Spread Some :heart:
+[![GitHub followers](https://img.shields.io/github/followers/manojbhadane.svg?style=social&label=Follow)](https://github.com/manojbhadane)  [![Twitter Follow](https://img.shields.io/twitter/follow/manojbhadane.svg?style=social)](https://twitter.com/Manoj_bhadane) 
+
 
 # Bugs or Requests
 
