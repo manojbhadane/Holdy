@@ -42,7 +42,7 @@ dependencies {
 
 ## Style.xml
 This Mandatory style, configure once in application class. you can create your own style for each holder but parent for each 
-style should be 'Theme.AppCompat.Light.NoActionBar'
+style should be **'Theme.AppCompat.Light.NoActionBar'**
 ```xml
 <style name="HoldyTheme" parent="Theme.AppCompat.Light.NoActionBar">
     <item name="colorPrimary">@color/colorPrimary</item>
