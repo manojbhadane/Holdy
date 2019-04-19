@@ -8,7 +8,7 @@
   <a target="_blank" href="https://paypal.me/manojbhadane" title="Donate using PayPal"><img src="https://img.shields.io/badge/paypal-donate-blue.svg" /></a>
 </p>
 
-<p align="center">Android Library that can easily load any fragment in a provided container. library encourage us to use maximum fragments which reducing application size. With holdy you can easily deal with fragments.</p>
+<p align="center">Android Library that can easily load any fragment in a provided container. library encourage us to use maximum fragments which reducing application size. With holdy you can easily deal with many fragments.</p>
 
 # Features
 **1. Reduce application size with holdy**<br/>
