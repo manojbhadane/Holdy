@@ -38,7 +38,7 @@ allprojects
 ```
 dependencies 
 {
-		 implementation 'com.github.manojbhadane:Holdy:v1.0'
+		 implementation 'com.github.manojbhadane:Holdy:v1.1'
 }
 ```
 
