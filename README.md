@@ -84,7 +84,7 @@ There are several customization options available which you can use to completel
 ### JAVA (Programatically)
 
 You can also programatically change the properties of the view, thereby having more control over it.
-
+```
 #### 1. Title for fragment
 setTitle("Home")
 
@@ -102,7 +102,7 @@ setTheme(R.style.HomeTheme)
 
 #### 6. Fragment that needs to be load
 setFragment(LoginFragment.class.getCanonicalName())
-
+```
 
 # Bugs or Requests
 
