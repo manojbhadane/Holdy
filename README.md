@@ -3,6 +3,12 @@
 #
 Lightweight, Easy to use container for any fragment
 
+# Features
+**1. Reduce application size with holdy**<br/>
+**2. Deal with fragments easily with holdy**<br/>
+**3. Highly customisable**<br/>
+
+
 ### Specs
 <!---[![](https://jitpack.io/v/manojbhadane/QButton.svg)](https://jitpack.io/#manojbhadane/QButton)-->
 
