@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.manojbhadane.holdy.databinding.ActivityHolderBinding;
 
@@ -16,7 +17,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import static com.manojbhadane.holdy.Holdy.KEY_FRAGMENT;
 
-public class HolderActivity extends AppCompatActivity {
+public  class HolderActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -73,8 +74,16 @@ public class HolderActivity extends AppCompatActivity {
             transaction.commit();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
+            Toast.makeText(this, "Invalid fragment", Toast.LENGTH_SHORT).show();
+            finish();
+        } catch (ClassCastException e){
+            e.printStackTrace();
+            Toast.makeText(this, "Invalid fragment", Toast.LENGTH_SHORT).show();
+            finish();
         } catch (Exception e) {
             e.printStackTrace();
+            Toast.makeText(this, "Something went wrong", Toast.LENGTH_SHORT).show();
+            finish();
         }
     }
 

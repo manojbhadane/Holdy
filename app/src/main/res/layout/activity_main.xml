@@ -30,5 +30,15 @@
             app:qb_backgroundColor="@color/colorPrimary"
             app:qb_radius="100" />
 
+        <com.manojbhadane.QButton
+            android:id="@+id/btnFrag3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Load Fragment - 3"
+            android:textColor="@android:color/white"
+            app:qb_backgroundColor="@color/colorPrimary"
+            app:qb_radius="100" />
+
     </LinearLayout>
 </layout>

@@ -79,8 +79,8 @@ public class Holdy {
             return this;
         }
 
-        public Builder setFragment(String frag) {
-            this.mFragment = frag;
+        public Builder setFragment(String fragment) {
+            this.mFragment = fragment;
             return this;
         }
 
