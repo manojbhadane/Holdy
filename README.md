@@ -112,7 +112,7 @@ setTheme(R.style.HomeTheme)
 setFragment(LoginFragment.class.getCanonicalName())
 ```
 
-## Apps using Holdy
+# Apps using Holdy
 1. **Fincal :** You can download the app from Google Play:
 
 <a target="_blank" href="https://play.google.com/store/apps/details?id=com.financecalculator"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" height="60"></a>
