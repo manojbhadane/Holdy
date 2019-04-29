@@ -5,10 +5,11 @@
 <p align="center">
   <a target="_blank" href="https://android-arsenal.com/api?level=16"><img src="https://img.shields.io/badge/API-9%2B-orange.svg"></a>
   <a target="_blank" href="https://jitpack.io/#manojbhadane/Holdy"><img src="https://jitpack.io/v/manojbhadane/Holdy.svg"></a>
+  <a target="_blank" href="https://android-arsenal.com/details/1/7630"><img src="https://img.shields.io/badge/Android%20Arsenal-Holdy-brightgreen.svg?style=flat"></a>
   <a target="_blank" href="https://paypal.me/manojbhadane" title="Donate using PayPal"><img src="https://img.shields.io/badge/paypal-donate-blue.svg" /></a>
 </p>
 
-<p align="center">Android Library that can easily load any fragment in a provided container. library encourage us to use maximum fragments which reducing application size. With holdy you can easily deal with fragments.</p>
+<p align="center">Android Library that can easily load any fragment in a provided container. library encourage us to use maximum fragments which reducing application size. With holdy you can easily deal with many fragments.</p>
 
 # Features
 **1. Reduce application size with holdy**<br/>
