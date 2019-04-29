@@ -2,6 +2,7 @@ package com.manojbhadane.holdy;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -15,6 +16,7 @@ final public class Holdy {
     protected static final String KEY_TOOLBAR_BACKBTN_VISIBILITY = "key_toolbar_back_btn_visibility";
 
     private static int sTheme;
+    public static Typeface sTypeface;
 
     private Holdy() {
     }
@@ -23,8 +25,9 @@ final public class Holdy {
         return new HoldyBuilder(context);
     }
 
-    public static void init(int theme) {
+    public static void init(int theme, Typeface typeface) {
         sTheme = theme;
+        sTypeface = typeface;
     }
 
     public static class HoldyBuilder {

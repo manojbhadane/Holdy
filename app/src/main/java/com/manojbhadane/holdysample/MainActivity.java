@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
                         .setFragment(HomeFragment.class.getCanonicalName())
                         .build();
 
+
             }
         });
 

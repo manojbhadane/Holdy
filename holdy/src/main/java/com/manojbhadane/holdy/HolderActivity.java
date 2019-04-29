@@ -4,18 +4,21 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.manojbhadane.holdy.databinding.ActivityHolderBinding;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import static com.manojbhadane.holdy.Holdy.KEY_FRAGMENT;
+import static com.manojbhadane.holdy.Holdy.sTypeface;
 
 public  class HolderActivity extends AppCompatActivity {
 
@@ -47,6 +50,7 @@ public  class HolderActivity extends AppCompatActivity {
             getSupportActionBar().setTitle(title);
             if (shouldShowToolbarBackBtn)
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            applyFontForToolbarTitle(dataBinding.toolBar);
         } else {
             dataBinding.toolBar.setVisibility(View.GONE);
         }
@@ -96,6 +100,19 @@ public  class HolderActivity extends AppCompatActivity {
 
             default:
                 return super.onOptionsItemSelected(item);
+        }
+    }
+
+    public void applyFontForToolbarTitle(Toolbar toolbar) {
+        for (int i = 0; i < toolbar.getChildCount(); i++) {
+            View view = toolbar.getChildAt(i);
+            if (view instanceof TextView) {
+                TextView tv = (TextView) view;
+                if (tv.getText().equals(toolbar.getTitle())) {
+                    tv.setTypeface(sTypeface);
+                    break;
+                }
+            }
         }
     }
 }
