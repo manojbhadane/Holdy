@@ -30,6 +30,11 @@ final public class Holdy {
         sTypeface = typeface;
     }
 
+    public static void init(int theme) {
+        sTheme = theme;
+        sTypeface = null;
+    }
+
     public static class HoldyBuilder {
 
         private String mTitle;
