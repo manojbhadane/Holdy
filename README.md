@@ -56,6 +56,10 @@ style should be **'Theme.AppCompat.Light.NoActionBar'**
 Set style for all holders
 ```
 Holdy.init(R.style.HoldyTheme);
+
+or 
+
+Holdy.init(R.style.HoldyTheme, typefaceHere);
 ```
 
 ## Minimum configuration
