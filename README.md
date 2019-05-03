@@ -16,10 +16,6 @@
 **2. Deal with fragments easily with holdy**<br/>
 **3. Highly customisable**<br/>
 
-# Note
-This library is using **androidx**, If you face any problems related to AppCompat library make sure you project is updated with **androidx**.
-
-
 # Download
 
 This library is available in **jitPack** which is the default Maven repository used in Android Studio.
@@ -41,17 +37,6 @@ dependencies {
 	 implementation 'com.github.manojbhadane:Holdy:v1.6.1'
 }
 ```
-**Step 3.** Enable databinding in your apps module **build.gradle**
-```Gradle
-android {
-	 ...
-	 
-	dataBinding {
-        	enabled true
-    	}
-}
-```
-
 
 # Usage
 
