@@ -16,6 +16,9 @@
 **2. Deal with fragments easily with holdy**<br/>
 **3. Highly customisable**<br/>
 
+# Note
+This library is using **androidx**, If you face any problems related to AppCompat library make sure you project is updated with **androidx**.
+
 
 # Download
 
@@ -35,9 +38,20 @@ allprojects {
 **Step 2.** Add the dependency in your apps module **build.gradle**
 ```Gradle
 dependencies {
-	 implementation 'com.github.manojbhadane:Holdy:v1.3'
+	 implementation 'com.github.manojbhadane:Holdy:v1.6'
 }
 ```
+**Step 3.** Enable databinding in your apps module **build.gradle**
+```Gradle
+android {
+	 ...
+	 
+	dataBinding {
+        	enabled true
+    	}
+}
+```
+
 
 # Usage
 
@@ -56,6 +70,10 @@ style should be **'Theme.AppCompat.Light.NoActionBar'**
 Set style for all holders
 ```
 Holdy.init(R.style.HoldyTheme);
+
+or 
+
+Holdy.init(R.style.HoldyTheme, typefaceHere);
 ```
 
 ## Minimum configuration
