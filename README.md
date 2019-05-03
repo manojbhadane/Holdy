@@ -38,7 +38,7 @@ allprojects {
 **Step 2.** Add the dependency in your apps module **build.gradle**
 ```Gradle
 dependencies {
-	 implementation 'com.github.manojbhadane:Holdy:v1.6'
+	 implementation 'com.github.manojbhadane:Holdy:v1.6.1'
 }
 ```
 **Step 3.** Enable databinding in your apps module **build.gradle**
