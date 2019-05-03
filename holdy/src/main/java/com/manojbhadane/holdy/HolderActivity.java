@@ -1,6 +1,7 @@
 package com.manojbhadane.holdy;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -9,17 +10,16 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
-import com.manojbhadane.holdy.databinding.ActivityHolderBinding;
 
 import static com.manojbhadane.holdy.Holdy.KEY_FRAGMENT;
 import static com.manojbhadane.holdy.Holdy.sTypeface;
 
 public class HolderActivity extends AppCompatActivity {
+
+    private Toolbar toolBar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,20 +37,22 @@ public class HolderActivity extends AppCompatActivity {
         setTheme(theme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_holder);
-        ActivityHolderBinding dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_holder);
+//        ActivityHolderBinding dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_holder);
+
+        toolBar = (Toolbar) findViewById(R.id.toolBar);
 
         /**
          *  Toolbar
          */
         if (shouldShowToolbar) {
-            dataBinding.toolBar.setVisibility(View.VISIBLE);
-            setSupportActionBar(dataBinding.toolBar);
+            toolBar.setVisibility(View.VISIBLE);
+            setSupportActionBar(toolBar);
             getSupportActionBar().setTitle(title);
             if (shouldShowToolbarBackBtn)
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            applyFontForToolbarTitle(dataBinding.toolBar);
+            applyFontForToolbarTitle(toolBar);
         } else {
-            dataBinding.toolBar.setVisibility(View.GONE);
+            toolBar.setVisibility(View.GONE);
         }
 
         /**
@@ -110,6 +112,8 @@ public class HolderActivity extends AppCompatActivity {
                 if (tv.getText().equals(toolbar.getTitle())) {
                     if (sTypeface != null)
                         tv.setTypeface(sTypeface);
+                    else
+                        Log.e("Holdy", "Typeface: typeface is null");
                     break;
                 }
             }

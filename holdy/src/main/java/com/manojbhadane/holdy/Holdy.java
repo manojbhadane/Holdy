@@ -32,7 +32,6 @@ final public class Holdy {
 
     public static void init(int theme) {
         sTheme = theme;
-        sTypeface = null;
     }
 
     public static class HoldyBuilder {
