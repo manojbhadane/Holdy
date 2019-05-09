@@ -16,6 +16,9 @@
 **2. Deal with fragments easily with holdy**<br/>
 **3. Highly customisable**<br/>
 
+# Note
+This library is using **androidx**, If you face any problems related to AppCompat library make sure you project is updated with **androidx**.
+
 # Download
 
 This library is available in **jitPack** which is the default Maven repository used in Android Studio.
