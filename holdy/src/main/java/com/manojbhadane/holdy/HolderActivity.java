@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,6 +16,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import static com.manojbhadane.holdy.Holdy.KEY_FRAGMENT;
+import static com.manojbhadane.holdy.Holdy.KEY_SOFTINPUT_MODE;
 import static com.manojbhadane.holdy.Holdy.sTypeface;
 
 public class HolderActivity extends AppCompatActivity {
@@ -33,11 +35,18 @@ public class HolderActivity extends AppCompatActivity {
         boolean shouldShowToolbar = b.getBoolean(Holdy.KEY_TOOLBAR_VISIBILITY);
         boolean shouldShowToolbarBackBtn = b.getBoolean(Holdy.KEY_TOOLBAR_BACKBTN_VISIBILITY);
         String fragment = b.getString(KEY_FRAGMENT);
+        int softInputMode = b.getInt(KEY_SOFTINPUT_MODE);
 
         setTheme(theme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_holder);
-//        ActivityHolderBinding dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_holder);
+
+        if (softInputMode != 0) {
+            //WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE
+            //WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN
+            getWindow().setSoftInputMode(softInputMode);
+//            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        }
 
         toolBar = (Toolbar) findViewById(R.id.toolBar);
 

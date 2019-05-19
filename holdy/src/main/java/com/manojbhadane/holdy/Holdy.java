@@ -12,11 +12,12 @@ final public class Holdy {
     protected static final String KEY_TITLE = "key_title";
     protected static final String KEY_THEME = "key_theme";
     protected static final String KEY_FRAGMENT = "key_fragment";
+    protected static final String KEY_SOFTINPUT_MODE = "key_softinput_mode";
     protected static final String KEY_TOOLBAR_VISIBILITY = "key_toolbar_visibility";
     protected static final String KEY_TOOLBAR_BACKBTN_VISIBILITY = "key_toolbar_back_btn_visibility";
 
-    private static int sTheme;
     public static Typeface sTypeface;
+    private static int sTheme;
 
     private Holdy() {
     }
@@ -36,6 +37,7 @@ final public class Holdy {
 
     public static class HoldyBuilder {
 
+        private int mSoftInputMode=0;
         private String mTitle;
         private Bundle mBundle;
         private Context mContext;
@@ -75,6 +77,7 @@ final public class Holdy {
 
             mBundle.putString(KEY_TITLE, getTitle());
             mBundle.putString(KEY_FRAGMENT, mFragment);
+            mBundle.putInt(KEY_SOFTINPUT_MODE, mSoftInputMode);
             mBundle.putBoolean(KEY_TOOLBAR_VISIBILITY, isShowToolbar());
             mBundle.putBoolean(KEY_TOOLBAR_BACKBTN_VISIBILITY, isToolbarBackBtnShown());
             if (sTheme != 0)
@@ -120,6 +123,11 @@ final public class Holdy {
 
         public HoldyBuilder setTheme(int theme) {
             this.mTheme = theme;
+            return this;
+        }
+
+        public HoldyBuilder setSoftInputMode(int softInputMode) {
+            mSoftInputMode = softInputMode;
             return this;
         }
 

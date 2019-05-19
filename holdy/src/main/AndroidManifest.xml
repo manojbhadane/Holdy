@@ -1,9 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.manojbhadane.holdy" >
+    package="com.manojbhadane.holdy">
 
     <application>
 
-        <activity android:name=".HolderActivity"/>
+        <activity
+            android:name=".HolderActivity" />
 
     </application>
 
