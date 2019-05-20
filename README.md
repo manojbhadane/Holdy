@@ -37,7 +37,7 @@ allprojects {
 **Step 2.** Add the dependency in your apps module **build.gradle**
 ```Gradle
 dependencies {
-	 implementation 'com.github.manojbhadane:Holdy:v1.6.1'
+	 implementation 'com.github.manojbhadane:Holdy:v1.6.2'
 }
 ```
 
@@ -79,6 +79,7 @@ Holdy.Builder(this)
           .setBundle(new Bundle())
           .setToolbarBackBtn(true)
           .setTheme(R.style.HomeTheme)
+	  .setSoftInputMode(windowSoftInputMode)
           .setFragment(LoginFragment.class.getCanonicalName())
           .build();
 ```
@@ -109,6 +110,9 @@ setTheme(R.style.HomeTheme)
 
 6. Fragment that needs to be load
 setFragment(LoginFragment.class.getCanonicalName())
+
+7. Set window soft input mode
+setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
 ```
 
 # Apps using Holdy
