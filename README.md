@@ -37,7 +37,7 @@ allprojects {
 **Step 2.** Add the dependency in your apps module **build.gradle**
 ```Gradle
 dependencies {
-	 implementation 'com.github.manojbhadane:Holdy:v1.6.2'
+	 implementation 'com.github.manojbhadane:Holdy:v1.6.3'
 }
 ```
 
@@ -78,6 +78,7 @@ Holdy.Builder(this)
           .setShowToolbar(true)
           .setBundle(new Bundle())
           .setToolbarBackBtn(true)
+	  .setOrientationToPortrait()
           .setTheme(R.style.HomeTheme)
 	  .setSoftInputMode(windowSoftInputMode)
           .setFragment(LoginFragment.class.getCanonicalName())
@@ -113,6 +114,8 @@ setFragment(LoginFragment.class.getCanonicalName())
 
 7. Set window soft input mode
 setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
+
+8. setOrientationToPortrait
 ```
 
 # Apps using Holdy
