@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,6 +15,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import static com.manojbhadane.holdy.Holdy.KEY_FRAGMENT;
+import static com.manojbhadane.holdy.Holdy.KEY_SCREEN_ORIENTATION_PORTRAIT;
 import static com.manojbhadane.holdy.Holdy.KEY_SOFTINPUT_MODE;
 import static com.manojbhadane.holdy.Holdy.sTypeface;
 
@@ -36,6 +36,7 @@ public class HolderActivity extends AppCompatActivity {
         boolean shouldShowToolbarBackBtn = b.getBoolean(Holdy.KEY_TOOLBAR_BACKBTN_VISIBILITY);
         String fragment = b.getString(KEY_FRAGMENT);
         int softInputMode = b.getInt(KEY_SOFTINPUT_MODE);
+        int screenOrientation = b.getInt(KEY_SCREEN_ORIENTATION_PORTRAIT);
 
         setTheme(theme);
         super.onCreate(savedInstanceState);
@@ -49,6 +50,9 @@ public class HolderActivity extends AppCompatActivity {
         }
 
         toolBar = (Toolbar) findViewById(R.id.toolBar);
+
+        if (screenOrientation != -1)
+            setRequestedOrientation(screenOrientation);
 
         /**
          *  Toolbar

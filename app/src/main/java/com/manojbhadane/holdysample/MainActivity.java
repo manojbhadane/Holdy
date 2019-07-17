@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 Holdy.Builder(MainActivity.this)
                         .setTitle("Login")
                         .setToolbarBackBtn(false)
+                        .setOrientationToPortrait()
                         .setFragment(LoginFragment.class.getCanonicalName())
                         .build();
 

@@ -2,6 +2,7 @@ package com.manojbhadane.holdy;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -13,6 +14,7 @@ final public class Holdy {
     protected static final String KEY_THEME = "key_theme";
     protected static final String KEY_FRAGMENT = "key_fragment";
     protected static final String KEY_SOFTINPUT_MODE = "key_softinput_mode";
+    protected static final String KEY_SCREEN_ORIENTATION_PORTRAIT = "key_screen_orientation_portrait";
     protected static final String KEY_TOOLBAR_VISIBILITY = "key_toolbar_visibility";
     protected static final String KEY_TOOLBAR_BACKBTN_VISIBILITY = "key_toolbar_back_btn_visibility";
 
@@ -37,7 +39,8 @@ final public class Holdy {
 
     public static class HoldyBuilder {
 
-        private int mSoftInputMode=0;
+        private int mScreenOrientation = -1;
+        private int mSoftInputMode = 0;
         private String mTitle;
         private Bundle mBundle;
         private Context mContext;
@@ -78,6 +81,7 @@ final public class Holdy {
             mBundle.putString(KEY_TITLE, getTitle());
             mBundle.putString(KEY_FRAGMENT, mFragment);
             mBundle.putInt(KEY_SOFTINPUT_MODE, mSoftInputMode);
+            mBundle.putInt(KEY_SCREEN_ORIENTATION_PORTRAIT, mScreenOrientation);
             mBundle.putBoolean(KEY_TOOLBAR_VISIBILITY, isShowToolbar());
             mBundle.putBoolean(KEY_TOOLBAR_BACKBTN_VISIBILITY, isToolbarBackBtnShown());
             if (sTheme != 0)
@@ -128,6 +132,11 @@ final public class Holdy {
 
         public HoldyBuilder setSoftInputMode(int softInputMode) {
             mSoftInputMode = softInputMode;
+            return this;
+        }
+
+        public HoldyBuilder setOrientationToPortrait() {
+            mScreenOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
             return this;
         }
 
