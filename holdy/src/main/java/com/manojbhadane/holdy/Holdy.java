@@ -9,6 +9,16 @@ import android.widget.Toast;
 
 final public class Holdy {
 
+    /**
+     * Version Commit guide on Jitpack , execute follwing commands
+     * <p>
+     * git tag -a v1.2 -m "first commit"
+     * git push origin v1.2
+     *
+     * @param context
+     * @param attrs
+     */
+
     protected static final String KEY = "key_container";
     protected static final String KEY_TITLE = "key_title";
     protected static final String KEY_THEME = "key_theme";
